@@ -1,4 +1,5 @@
 github "RxSwiftCommunity/RxReduce"
+github "AliSoftware/Reusable"
 github "SnapKit/SnapKit" ~> 5.0.0
 github "Moya/Moya"
 github "SVProgressHUD/SVProgressHUD"

@@ -1,0 +1,10 @@
+
+$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+$(SRCROOT)/Carthage/Build/iOS/Moya.framework
+$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework
+$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework
+$(SRCROOT)/Carthage/Build/iOS/Reusable.framework
+$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework
+$(SRCROOT)/Carthage/Build/iOS/RxReduce.framework
+$(SRCROOT)/Carthage/Build/iOS/Result.framework

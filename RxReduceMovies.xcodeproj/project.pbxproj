@@ -3,25 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BBCE8EFD229F76E5001A4FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8EFC229F76E5001A4FDA /* AppDelegate.swift */; };
 		BBCE8EFF229F76E5001A4FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8EFE229F76E5001A4FDA /* ViewController.swift */; };
-		BBCE8F02229F76E5001A4FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F00229F76E5001A4FDA /* Main.storyboard */; };
 		BBCE8F04229F76E6001A4FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F03229F76E6001A4FDA /* Assets.xcassets */; };
 		BBCE8F07229F76E6001A4FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F05229F76E6001A4FDA /* LaunchScreen.storyboard */; };
+		BBCE8F12229F7E81001A4FDA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F11229F7E81001A4FDA /* MainTabBarController.swift */; };
+		BBCE8F15229F810C001A4FDA /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F14229F810C001A4FDA /* MoviesListViewController.swift */; };
+		BBCE8F17229F811D001A4FDA /* CheckedMoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F16229F811D001A4FDA /* CheckedMoviesListViewController.swift */; };
+		BBCE8F18229F8241001A4FDA /* Carthage.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F0E229F7CB9001A4FDA /* Carthage.xcfilelist */; };
+		BBCE8F1B229F84E4001A4FDA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F1A229F84E4001A4FDA /* SnapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F20229F853C001A4FDA /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F1C229F853C001A4FDA /* Moya.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F21229F853C001A4FDA /* RxReduce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F1D229F853C001A4FDA /* RxReduce.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F22229F853C001A4FDA /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F1E229F853C001A4FDA /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F23229F853C001A4FDA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F1F229F853C001A4FDA /* RxSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F25229F8961001A4FDA /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F24229F8961001A4FDA /* Reusable.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BBCE8F27229F8B9E001A4FDA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F26229F8B9E001A4FDA /* Result.framework */; };
+		BBCE8F2A229F8E9B001A4FDA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F29229F8E9B001A4FDA /* AppState.swift */; };
+		BBCE8F2D229F9176001A4FDA /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F2C229F9176001A4FDA /* ViewModelBased.swift */; };
+		BBCE8F30229F92EC001A4FDA /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F2F229F92EC001A4FDA /* Injectable.swift */; };
+		BBCE8F33229F9918001A4FDA /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */; };
+		BBCE8F35229F9985001A4FDA /* HasStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F34229F9985001A4FDA /* HasStore.swift */; };
+		BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BBCE8EF9229F76E5001A4FDA /* RxReduceMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxReduceMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCE8EFC229F76E5001A4FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBCE8EFE229F76E5001A4FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BBCE8F01229F76E5001A4FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBCE8F03229F76E6001A4FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBCE8F06229F76E6001A4FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBCE8F08229F76E6001A4FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCE8F0E229F7CB9001A4FDA /* Carthage.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = Carthage.xcfilelist; sourceTree = "<group>"; };
+		BBCE8F11229F7E81001A4FDA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BBCE8F14229F810C001A4FDA /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		BBCE8F16229F811D001A4FDA /* CheckedMoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedMoviesListViewController.swift; sourceTree = "<group>"; };
+		BBCE8F1A229F84E4001A4FDA /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		BBCE8F1C229F853C001A4FDA /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		BBCE8F1D229F853C001A4FDA /* RxReduce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxReduce.framework; path = Carthage/Build/iOS/RxReduce.framework; sourceTree = "<group>"; };
+		BBCE8F1E229F853C001A4FDA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		BBCE8F1F229F853C001A4FDA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		BBCE8F24229F8961001A4FDA /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
+		BBCE8F26229F8B9E001A4FDA /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		BBCE8F29229F8E9B001A4FDA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BBCE8F2C229F9176001A4FDA /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
+		BBCE8F2F229F92EC001A4FDA /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		BBCE8F34229F9985001A4FDA /* HasStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasStore.swift; sourceTree = "<group>"; };
+		BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCE8F27229F8B9E001A4FDA /* Result.framework in Frameworks */,
+				BBCE8F25229F8961001A4FDA /* Reusable.framework in Frameworks */,
+				BBCE8F20229F853C001A4FDA /* Moya.framework in Frameworks */,
+				BBCE8F21229F853C001A4FDA /* RxReduce.framework in Frameworks */,
+				BBCE8F22229F853C001A4FDA /* SVProgressHUD.framework in Frameworks */,
+				BBCE8F23229F853C001A4FDA /* RxSwift.framework in Frameworks */,
+				BBCE8F1B229F84E4001A4FDA /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +79,7 @@
 			children = (
 				BBCE8EFB229F76E5001A4FDA /* RxReduceMovies */,
 				BBCE8EFA229F76E5001A4FDA /* Products */,
+				BBCE8F19229F84E4001A4FDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +94,85 @@
 		BBCE8EFB229F76E5001A4FDA /* RxReduceMovies */ = {
 			isa = PBXGroup;
 			children = (
+				BBCE8F2E229F9298001A4FDA /* Protocol */,
+				BBCE8F2B229F9163001A4FDA /* Extensions */,
+				BBCE8F28229F8E8A001A4FDA /* State */,
+				BBCE8F10229F7E5E001A4FDA /* Scenes */,
 				BBCE8EFC229F76E5001A4FDA /* AppDelegate.swift */,
 				BBCE8EFE229F76E5001A4FDA /* ViewController.swift */,
-				BBCE8F00229F76E5001A4FDA /* Main.storyboard */,
 				BBCE8F03229F76E6001A4FDA /* Assets.xcassets */,
 				BBCE8F05229F76E6001A4FDA /* LaunchScreen.storyboard */,
 				BBCE8F08229F76E6001A4FDA /* Info.plist */,
+				BBCE8F0E229F7CB9001A4FDA /* Carthage.xcfilelist */,
 			);
 			path = RxReduceMovies;
+			sourceTree = "<group>";
+		};
+		BBCE8F10229F7E5E001A4FDA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F31229F9900001A4FDA /* MoviesList */,
+				BBCE8F13229F80F2001A4FDA /* Containers */,
+				BBCE8F16229F811D001A4FDA /* CheckedMoviesListViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BBCE8F13229F80F2001A4FDA /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F11229F7E81001A4FDA /* MainTabBarController.swift */,
+				BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		BBCE8F19229F84E4001A4FDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F26229F8B9E001A4FDA /* Result.framework */,
+				BBCE8F24229F8961001A4FDA /* Reusable.framework */,
+				BBCE8F1C229F853C001A4FDA /* Moya.framework */,
+				BBCE8F1D229F853C001A4FDA /* RxReduce.framework */,
+				BBCE8F1F229F853C001A4FDA /* RxSwift.framework */,
+				BBCE8F1E229F853C001A4FDA /* SVProgressHUD.framework */,
+				BBCE8F1A229F84E4001A4FDA /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBCE8F28229F8E8A001A4FDA /* State */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F29229F8E9B001A4FDA /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		BBCE8F2B229F9163001A4FDA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBCE8F2E229F9298001A4FDA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F2C229F9176001A4FDA /* ViewModelBased.swift */,
+				BBCE8F2F229F92EC001A4FDA /* Injectable.swift */,
+				BBCE8F34229F9985001A4FDA /* HasStore.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BBCE8F31229F9900001A4FDA /* MoviesList */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F14229F810C001A4FDA /* MoviesListViewController.swift */,
+				BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */,
+			);
+			path = MoviesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +185,7 @@
 				BBCE8EF5229F76E5001A4FDA /* Sources */,
 				BBCE8EF6229F76E5001A4FDA /* Frameworks */,
 				BBCE8EF7229F76E5001A4FDA /* Resources */,
+				BBCE8F0F229F7DC3001A4FDA /* ⚙️ Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -123,34 +235,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBCE8F07229F76E6001A4FDA /* LaunchScreen.storyboard in Resources */,
+				BBCE8F18229F8241001A4FDA /* Carthage.xcfilelist in Resources */,
 				BBCE8F04229F76E6001A4FDA /* Assets.xcassets in Resources */,
-				BBCE8F02229F76E5001A4FDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBCE8F0F229F7DC3001A4FDA /* ⚙️ Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/RxReduceMovies/Carthage.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "⚙️ Carthage Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBCE8EF5229F76E5001A4FDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCE8F30229F92EC001A4FDA /* Injectable.swift in Sources */,
+				BBCE8F17229F811D001A4FDA /* CheckedMoviesListViewController.swift in Sources */,
 				BBCE8EFF229F76E5001A4FDA /* ViewController.swift in Sources */,
+				BBCE8F33229F9918001A4FDA /* MoviesListViewModel.swift in Sources */,
 				BBCE8EFD229F76E5001A4FDA /* AppDelegate.swift in Sources */,
+				BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */,
+				BBCE8F2A229F8E9B001A4FDA /* AppState.swift in Sources */,
+				BBCE8F35229F9985001A4FDA /* HasStore.swift in Sources */,
+				BBCE8F2D229F9176001A4FDA /* ViewModelBased.swift in Sources */,
+				BBCE8F12229F7E81001A4FDA /* MainTabBarController.swift in Sources */,
+				BBCE8F15229F810C001A4FDA /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BBCE8F00229F76E5001A4FDA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBCE8F01229F76E5001A4FDA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BBCE8F05229F76E6001A4FDA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +419,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX96WU2A55;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxReduceMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KazukiSugita.RxReduceMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +442,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX96WU2A55;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxReduceMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KazukiSugita.RxReduceMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
