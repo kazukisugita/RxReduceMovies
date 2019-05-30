@@ -30,6 +30,16 @@
 		BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */; };
 		BBCE8F3A229F9FB0001A4FDA /* MovieListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F38229F9FB0001A4FDA /* MovieListViewCell.swift */; };
 		BBCE8F3B229F9FB0001A4FDA /* MovieListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */; };
+		BBCE8F3F229FA264001A4FDA /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F3E229FA264001A4FDA /* Routes.swift */; };
+		BBCE8F43229FA30B001A4FDA /* DiscoverMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F40229FA30B001A4FDA /* DiscoverMovieResponse.swift */; };
+		BBCE8F44229FA30B001A4FDA /* DiscoverTVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F41229FA30B001A4FDA /* DiscoverTVResponse.swift */; };
+		BBCE8F45229FA30B001A4FDA /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F42229FA30B001A4FDA /* Media.swift */; };
+		BBCE8F48229FA34C001A4FDA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F47229FA34C001A4FDA /* NetworkService.swift */; };
+		BBCE8F4C229FA4D7001A4FDA /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F4B229FA4D7001A4FDA /* AppActions.swift */; };
+		BBCE8F4F229FAAC1001A4FDA /* AppMutators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F4E229FAAC1001A4FDA /* AppMutators.swift */; };
+		BBCE8F52229FABC2001A4FDA /* AppLenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F51229FABC2001A4FDA /* AppLenses.swift */; };
+		BBCE8F55229FACC5001A4FDA /* AppReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F54229FACC5001A4FDA /* AppReducers.swift */; };
+		BBCE8F57229FB440001A4FDA /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE8F56229FB440001A4FDA /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +68,16 @@
 		BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		BBCE8F38229F9FB0001A4FDA /* MovieListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListViewCell.swift; sourceTree = "<group>"; };
 		BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListViewCell.xib; sourceTree = "<group>"; };
+		BBCE8F3E229FA264001A4FDA /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		BBCE8F40229FA30B001A4FDA /* DiscoverMovieResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverMovieResponse.swift; sourceTree = "<group>"; };
+		BBCE8F41229FA30B001A4FDA /* DiscoverTVResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTVResponse.swift; sourceTree = "<group>"; };
+		BBCE8F42229FA30B001A4FDA /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		BBCE8F47229FA34C001A4FDA /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BBCE8F4B229FA4D7001A4FDA /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
+		BBCE8F4E229FAAC1001A4FDA /* AppMutators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMutators.swift; sourceTree = "<group>"; };
+		BBCE8F51229FABC2001A4FDA /* AppLenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLenses.swift; sourceTree = "<group>"; };
+		BBCE8F54229FACC5001A4FDA /* AppReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducers.swift; sourceTree = "<group>"; };
+		BBCE8F56229FB440001A4FDA /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCE8F57229FB440001A4FDA /* AlamofireImage.framework in Frameworks */,
 				BBCE8F27229F8B9E001A4FDA /* Result.framework in Frameworks */,
 				BBCE8F25229F8961001A4FDA /* Reusable.framework in Frameworks */,
 				BBCE8F20229F853C001A4FDA /* Moya.framework in Frameworks */,
@@ -98,9 +119,11 @@
 		BBCE8EFB229F76E5001A4FDA /* RxReduceMovies */ = {
 			isa = PBXGroup;
 			children = (
+				BBCE8F49229FA4BD001A4FDA /* Redux */,
+				BBCE8F46229FA345001A4FDA /* API */,
+				BBCE8F3C229FA210001A4FDA /* Models */,
 				BBCE8F2E229F9298001A4FDA /* Protocol */,
 				BBCE8F2B229F9163001A4FDA /* Extensions */,
-				BBCE8F28229F8E8A001A4FDA /* State */,
 				BBCE8F10229F7E5E001A4FDA /* Scenes */,
 				BBCE8EFC229F76E5001A4FDA /* AppDelegate.swift */,
 				BBCE8EFE229F76E5001A4FDA /* ViewController.swift */,
@@ -126,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				BBCE8F11229F7E81001A4FDA /* MainTabBarController.swift */,
-				BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -134,6 +156,7 @@
 		BBCE8F19229F84E4001A4FDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBCE8F56229FB440001A4FDA /* AlamofireImage.framework */,
 				BBCE8F26229F8B9E001A4FDA /* Result.framework */,
 				BBCE8F24229F8961001A4FDA /* Reusable.framework */,
 				BBCE8F1C229F853C001A4FDA /* Moya.framework */,
@@ -179,6 +202,78 @@
 				BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */,
 			);
 			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		BBCE8F3C229FA210001A4FDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F3E229FA264001A4FDA /* Routes.swift */,
+				BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */,
+				BBCE8F3D229FA221001A4FDA /* Codables */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBCE8F3D229FA221001A4FDA /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F40229FA30B001A4FDA /* DiscoverMovieResponse.swift */,
+				BBCE8F41229FA30B001A4FDA /* DiscoverTVResponse.swift */,
+				BBCE8F42229FA30B001A4FDA /* Media.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
+		BBCE8F46229FA345001A4FDA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F47229FA34C001A4FDA /* NetworkService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BBCE8F49229FA4BD001A4FDA /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F53229FACB9001A4FDA /* Reducers */,
+				BBCE8F50229FABB5001A4FDA /* Lens */,
+				BBCE8F4D229FAAB3001A4FDA /* Mutators */,
+				BBCE8F28229F8E8A001A4FDA /* State */,
+				BBCE8F4A229FA4C3001A4FDA /* Action */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		BBCE8F4A229FA4C3001A4FDA /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F4B229FA4D7001A4FDA /* AppActions.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		BBCE8F4D229FAAB3001A4FDA /* Mutators */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F4E229FAAC1001A4FDA /* AppMutators.swift */,
+			);
+			path = Mutators;
+			sourceTree = "<group>";
+		};
+		BBCE8F50229FABB5001A4FDA /* Lens */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F51229FABC2001A4FDA /* AppLenses.swift */,
+			);
+			path = Lens;
+			sourceTree = "<group>";
+		};
+		BBCE8F53229FACB9001A4FDA /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE8F54229FACC5001A4FDA /* AppReducers.swift */,
+			);
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,11 +374,20 @@
 				BBCE8F30229F92EC001A4FDA /* Injectable.swift in Sources */,
 				BBCE8F17229F811D001A4FDA /* CheckedMoviesListViewController.swift in Sources */,
 				BBCE8EFF229F76E5001A4FDA /* ViewController.swift in Sources */,
+				BBCE8F52229FABC2001A4FDA /* AppLenses.swift in Sources */,
 				BBCE8F33229F9918001A4FDA /* MoviesListViewModel.swift in Sources */,
 				BBCE8EFD229F76E5001A4FDA /* AppDelegate.swift in Sources */,
+				BBCE8F48229FA34C001A4FDA /* NetworkService.swift in Sources */,
+				BBCE8F44229FA30B001A4FDA /* DiscoverTVResponse.swift in Sources */,
+				BBCE8F55229FACC5001A4FDA /* AppReducers.swift in Sources */,
+				BBCE8F45229FA30B001A4FDA /* Media.swift in Sources */,
 				BBCE8F3A229F9FB0001A4FDA /* MovieListViewCell.swift in Sources */,
+				BBCE8F43229FA30B001A4FDA /* DiscoverMovieResponse.swift in Sources */,
 				BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */,
+				BBCE8F4F229FAAC1001A4FDA /* AppMutators.swift in Sources */,
+				BBCE8F4C229FA4D7001A4FDA /* AppActions.swift in Sources */,
 				BBCE8F2A229F8E9B001A4FDA /* AppState.swift in Sources */,
+				BBCE8F3F229FA264001A4FDA /* Routes.swift in Sources */,
 				BBCE8F35229F9985001A4FDA /* HasStore.swift in Sources */,
 				BBCE8F2D229F9176001A4FDA /* ViewModelBased.swift in Sources */,
 				BBCE8F12229F7E81001A4FDA /* MainTabBarController.swift in Sources */,

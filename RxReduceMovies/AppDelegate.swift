@@ -4,11 +4,14 @@ import RxReduce
 
 let store: Store<AppState> = {
     let appState = AppState(
-        moviesListState: .empty,
-        movieDetailState: .empty,
-        checkedMoviesState: .empty
+        moviesListState: .empty
+//        movieDetailState: .empty,
+//        checkedMoviesState: .empty
     )
     let store = Store<AppState>(withState: appState)
+    
+    store.register(mutator: AppMutators.movieListMutator)
+    
     return store
 }()
 

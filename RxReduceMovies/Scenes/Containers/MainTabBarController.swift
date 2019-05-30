@@ -13,7 +13,8 @@ class MainTabBarController: UITabBarController {
         
         self.tabBar.isTranslucent = false
         
-        let dependencyContainer = DependencyContainer(withStore: store)
+        let networkService: NetworkService = NetworkService(withBaseUrl: URL(string: "https://api.themoviedb.org/3/")!, andApiKey: "3afafd21270fe0414eb760a41f2620eb")
+        let dependencyContainer = DependencyContainer(withStore: store, withNetworkService: networkService)
         
         let viewControllers = [
             MoviesListViewController.instanceFromCode(with: MoviesListViewModel(with: dependencyContainer)),

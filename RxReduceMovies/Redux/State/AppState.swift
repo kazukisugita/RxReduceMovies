@@ -4,19 +4,19 @@ import RxReduce
 
 struct AppState: Equatable {
     var moviesListState: MoviesListState
-    var movieDetailState: MovieDetailState
-    var checkedMoviesState: CheckedMoviesState
+//    var movieDetailState: MovieDetailState
+//    var checkedMoviesState: CheckedMoviesState
 }
 
 enum MoviesListState: Equatable {
     case empty
     case loading
-    case loaded
+    case loaded([DiscoverMovieModel])
 }
 
 enum MovieDetailState: Equatable {
     case empty
-    case loaded
+    case loaded(DiscoverMovieModel)
 }
 
 enum CheckedMoviesState: Equatable {

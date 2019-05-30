@@ -1,5 +1,6 @@
 
 $(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework
 $(SRCROOT)/Carthage/Build/iOS/Moya.framework
 $(SRCROOT)/Carthage/Build/iOS/SnapKit.framework
 $(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework
