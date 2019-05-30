@@ -28,6 +28,8 @@
 		BBCE8F33229F9918001A4FDA /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */; };
 		BBCE8F35229F9985001A4FDA /* HasStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F34229F9985001A4FDA /* HasStore.swift */; };
 		BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */; };
+		BBCE8F3A229F9FB0001A4FDA /* MovieListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE8F38229F9FB0001A4FDA /* MovieListViewCell.swift */; };
+		BBCE8F3B229F9FB0001A4FDA /* MovieListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		BBCE8F34229F9985001A4FDA /* HasStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasStore.swift; sourceTree = "<group>"; };
 		BBCE8F36229F9BAE001A4FDA /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		BBCE8F38229F9FB0001A4FDA /* MovieListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListViewCell.swift; sourceTree = "<group>"; };
+		BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,8 @@
 			children = (
 				BBCE8F14229F810C001A4FDA /* MoviesListViewController.swift */,
 				BBCE8F32229F9918001A4FDA /* MoviesListViewModel.swift */,
+				BBCE8F38229F9FB0001A4FDA /* MovieListViewCell.swift */,
+				BBCE8F39229F9FB0001A4FDA /* MovieListViewCell.xib */,
 			);
 			path = MoviesList;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBCE8F07229F76E6001A4FDA /* LaunchScreen.storyboard in Resources */,
+				BBCE8F3B229F9FB0001A4FDA /* MovieListViewCell.xib in Resources */,
 				BBCE8F18229F8241001A4FDA /* Carthage.xcfilelist in Resources */,
 				BBCE8F04229F76E6001A4FDA /* Assets.xcassets in Resources */,
 			);
@@ -274,6 +281,7 @@
 				BBCE8EFF229F76E5001A4FDA /* ViewController.swift in Sources */,
 				BBCE8F33229F9918001A4FDA /* MoviesListViewModel.swift in Sources */,
 				BBCE8EFD229F76E5001A4FDA /* AppDelegate.swift in Sources */,
+				BBCE8F3A229F9FB0001A4FDA /* MovieListViewCell.swift in Sources */,
 				BBCE8F37229F9BAE001A4FDA /* DependencyContainer.swift in Sources */,
 				BBCE8F2A229F8E9B001A4FDA /* AppState.swift in Sources */,
 				BBCE8F35229F9985001A4FDA /* HasStore.swift in Sources */,

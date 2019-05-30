@@ -10,6 +10,7 @@ class MoviesListViewController: UIViewController, ViewModelBased {
         let tableView = UITableView()
         tableView.backgroundColor = UIColor.white
         tableView.dataSource = self
+        tableView.register(cellType: MovieListViewCell.self)
         return tableView
     }()
     
@@ -32,10 +33,12 @@ class MoviesListViewController: UIViewController, ViewModelBased {
 extension MoviesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell: MovieListViewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
 }
