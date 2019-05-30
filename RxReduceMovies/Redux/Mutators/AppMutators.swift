@@ -8,4 +8,14 @@ struct AppMutators {
         lens: AppLenses.movieListLens,
         reducer: movieListReducer
     )
+    
+    static let movieDetailMutator = Mutator<AppState, MovieDetailState>(
+        lens: AppLenses.movieDetailLens,
+        reducer: movieDetailReducer
+    )
+    
+    static let checkedMoviesMutator = Mutator<AppState, CheckedMoviesState>(
+        lens: AppLenses.checkedMoviesLens,
+        reducer: checkedMoviesReducer
+    )
 }

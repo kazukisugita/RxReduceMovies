@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
         
         let viewControllers = [
             MoviesListViewController.instanceFromCode(with: MoviesListViewModel(with: dependencyContainer)),
-            CheckedMoviesListViewController()
+            CheckedMoviesListViewController.instanceFromCode(with: CheckedMoviesListViewModel(with: dependencyContainer))
         ]
         
         let controllers = viewControllers.enumerated().map { controller -> UINavigationController in

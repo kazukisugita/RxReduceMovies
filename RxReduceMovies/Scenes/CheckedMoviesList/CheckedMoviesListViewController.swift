@@ -1,19 +1,16 @@
 
 import UIKit
-import SnapKit
 import RxCocoa
 import RxSwift
-import SVProgressHUD
 import Alamofire
 import AlamofireImage
 
-class MoviesListViewController: UIViewController, ViewModelBased {
+class CheckedMoviesListViewController: UIViewController, ViewModelBased {
     
-    private let disposeBag = DisposeBag()
+    var viewModel: CheckedMoviesListViewModel!
     
-    var viewModel: MoviesListViewModel!
     private var movies = [DiscoverMovieModel]()
-
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = UIColor.white
@@ -24,11 +21,33 @@ class MoviesListViewController: UIViewController, ViewModelBased {
         return tableView
     }()
     
+    private let disposeBag = DisposeBag()
+    private let compositeBag = CompositeDisposable()
+
+    private let viewWillAppearSubject = BehaviorSubject<Void>(value: ())
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureLayouts()
         configureSubscribes()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewWillAppearSubject.onNext(())
+        
+        let disposable = viewModel.fetchCheckedList()
+            .drive(onNext: { [unowned self] state in
+                if case let .checked(checkedMovies) = state {
+                    self.movies = checkedMovies
+                    self.tableView.reloadData()
+                }
+                print(#function)
+                self.compositeBag.dispose()
+            })
+        _ = compositeBag.insert(disposable)
     }
     
     private func configureLayouts() {
@@ -41,49 +60,25 @@ class MoviesListViewController: UIViewController, ViewModelBased {
     
     private func configureSubscribes() {
         
-        viewModel.fetchMovieList()
-            .do(onNext: { [unowned self] state in
-                switch state {
-                case .loaded:
-                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                        SVProgressHUD.dismiss()
-                    }
-                case .loading:
-                    SVProgressHUD.show()
-                default:
-                    SVProgressHUD.dismiss()
+        viewModel.fetchCheckedList()
+            .drive(onNext: { [unowned self] state in
+                if case let .checked(checkedMovies) = state {
+                    self.movies = checkedMovies
+                    self.tableView.reloadData()
                 }
             })
-            .drive(onNext: { [unowned self] state in
-                self.render(by: state)
+            .disposed(by: disposeBag)
+        
+        viewWillAppearSubject.asDriver(onErrorJustReturn: ())
+            .drive(onNext: { hoge in
+                
             })
             .disposed(by: disposeBag)
     }
     
 }
 
-extension MoviesListViewController {
-    
-    // MARK: Render
-    
-    private func render(by movieListState: MoviesListState) {
-        
-        switch movieListState {
-        case .empty:
-            movies.removeAll()
-            
-        case .loading:
-            movies.removeAll()
-            
-        case .loaded(let movies):
-            self.movies = movies
-            tableView.reloadData()
-        }
-    }
-    
-}
-
-extension MoviesListViewController: UITableViewDataSource {
+extension CheckedMoviesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.movies.count
@@ -102,12 +97,12 @@ extension MoviesListViewController: UITableViewDataSource {
             
             cell.poster.image = UIImage(data: data)
         }
-
+        
         return cell
     }
 }
 
-extension MoviesListViewController: UITableViewDelegate {
+extension CheckedMoviesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
@@ -115,20 +110,5 @@ extension MoviesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let movie = self.movies[indexPath.row]
-        
-        viewModel.setAsCheckedMovie(movieID: movie.id)
-            .drive()
-            .disposed(by: disposeBag)
-
-        let movieDetailViewModel = MovieDetailViewModel(with: self.viewModel.injectionContainer, withMovieId: movie.id)
-        let movieDetailViewController = MovieDetailViewController.instanceFromSB(with: movieDetailViewModel)
-        UIApplication.shared.keyWindow?.rootViewController?.present(movieDetailViewController, animated: true)
     }
 }

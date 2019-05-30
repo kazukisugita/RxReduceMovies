@@ -32,4 +32,12 @@ class MoviesListViewModel: ViewModel, Injectable {
             .dispatch(action: loadMovieAction) { $0.moviesListState }
             .asDriver(onErrorJustReturn: .empty)
     }
+    
+    func setAsCheckedMovie(movieID: Int) -> Driver<CheckedMoviesState> {
+        
+        return self.injectionContainer
+            .store
+            .dispatch(action: MovieAction.asChecked(movieId: movieID)) { $0.checkedMoviesState }
+            .asDriver(onErrorJustReturn: .empty)
+    }
 }
