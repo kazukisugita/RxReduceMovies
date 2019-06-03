@@ -59,7 +59,15 @@ func checkedMoviesReducer(state: AppState, action: Action) -> CheckedMoviesState
         guard let checkedMovie = movie else { return state.checkedMoviesState }
         
         if case var .checked(checkedMovies) = state.checkedMoviesState {
-            checkedMovies.append(checkedMovie)
+            
+            if checkedMovies.contains(checkedMovie) {
+                let filtered = checkedMovies.enumerated().filter { _, element in
+                    return element == checkedMovie
+                }
+                guard let offset = filtered.first?.offset else { return state.checkedMoviesState }
+                checkedMovies.remove(at: offset)
+            }
+            checkedMovies.insert(checkedMovie, at: 0)
             return .checked(checkedMovies)
         }
         else {

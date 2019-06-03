@@ -33,23 +33,6 @@ class CheckedMoviesListViewController: UIViewController, ViewModelBased {
         configureSubscribes()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        viewWillAppearSubject.onNext(())
-        
-        let disposable = viewModel.fetchCheckedList()
-            .drive(onNext: { [unowned self] state in
-                if case let .checked(checkedMovies) = state {
-                    self.movies = checkedMovies
-                    self.tableView.reloadData()
-                }
-                print(#function)
-                self.compositeBag.dispose()
-            })
-        _ = compositeBag.insert(disposable)
-    }
-    
     private func configureLayouts() {
         
         self.view.addSubview(tableView)
@@ -59,21 +42,24 @@ class CheckedMoviesListViewController: UIViewController, ViewModelBased {
     }
     
     private func configureSubscribes() {
+                
+        rx.sentMessage(#selector(viewWillAppear(_:)))
+            .subscribeOn(MainScheduler.instance)
+            .subscribe({ _ in self.fetchCheckedListFromViewModel() })
+            .disposed(by: disposeBag)
+    }
+    
+    private func fetchCheckedListFromViewModel() {
         
-        viewModel.fetchCheckedList()
+        let disposable = viewModel.fetchCheckedList()
             .drive(onNext: { [unowned self] state in
                 if case let .checked(checkedMovies) = state {
                     self.movies = checkedMovies
                     self.tableView.reloadData()
                 }
+                self.compositeBag.dispose()
             })
-            .disposed(by: disposeBag)
-        
-        viewWillAppearSubject.asDriver(onErrorJustReturn: ())
-            .drive(onNext: { hoge in
-                
-            })
-            .disposed(by: disposeBag)
+        _ = compositeBag.insert(disposable)
     }
     
 }
