@@ -29,6 +29,8 @@ class CheckedMoviesListViewController: UIViewController, ViewModelBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Checked"
+        
         configureLayouts()
         configureSubscribes()
     }

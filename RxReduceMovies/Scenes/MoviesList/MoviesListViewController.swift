@@ -27,6 +27,8 @@ class MoviesListViewController: UIViewController, ViewModelBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Movies"
+        
         configureLayouts()
         configureSubscribes()
     }
